@@ -1,13 +1,33 @@
 """Exercise 03: one clear basic inheritance example.
 
-Tasks:
-1. Create Animal(name) and store name on the instance.
-2. Create Dog(Animal) and add speak(), returning "<name>: woof".
-3. Create a Dog instance and call speak().
-4. Explain in one sentence why Dog "is an" Animal.
-
-Do not add more subclasses or build a complex class hierarchy.
+Run from the repository root:
+    python weeks/week-14-oop-essentials/exercises/ex03_inheritance.py
 """
 
-# TODO: implement Animal and Dog.
-# TODO: create a Dog instance, print its result, and write the explanation.
+
+class Animal:
+    """Base class for animals with a name."""
+
+    def __init__(self, name: str) -> None:
+        self.name = name
+
+
+class Dog(Animal):
+    """A dog inherits its name from Animal and adds a sound."""
+
+    def speak(self) -> str:
+        return f"{self.name}: woof"
+
+
+def main() -> None:
+    dog = Dog("Milo")
+    print(dog.speak())
+
+    # Dog is an Animal because it inherits Animal's shared attributes
+    # and can be used wherever an Animal instance is expected.
+    assert isinstance(dog, Animal)
+    print("Inheritance check: PASS")
+
+
+if __name__ == "__main__":
+    main()
