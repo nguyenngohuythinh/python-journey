@@ -2,6 +2,8 @@
 
 Tuần cuối tích hợp kỹ năng đã học thành evidence có thể chạy, đọc và review.
 
+Bản tóm tắt tuần: [readBALEN.md](readBALEN.md).
+
 ## Canonical capstone
 
 Đề bài, deliverables và rubric duy nhất nằm tại
