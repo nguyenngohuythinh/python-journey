@@ -1,21 +1,38 @@
 # Tuần 14 — OOP Essentials · Composition · Basic inheritance
 
-Tuần này bạn gom state và behavior có cùng trách nhiệm vào object. Với bot,
-composition là lựa chọn chính: Bot nhận một strategy có thể thay thế.
+Tuần này học cách gom dữ liệu và hành vi có liên quan vào object. Trọng tâm
+không phải dùng class cho mọi thứ, mà là chọn cấu trúc giúp code dễ hiểu hơn.
+Trong project VuaCóc Bot Journey, ta dùng **composition** để thay strategy mà
+không phải viết lại bot core.
 
-## Outcomes
+## Sau tuần này, bạn có thể
 
-- tạo class, object, __init__, instance attributes, methods và `__str__`;
-- hiểu encapsulation là giữ một trách nhiệm cùng dữ liệu liên quan;
-- dùng composition trước inheritance;
-- đổi defensive/balanced/aggressive strategy mà không sửa arena core;
-- dùng basic inheritance khi quan hệ “is-a” thật rõ.
+- phân biệt class, object, instance attribute và method;
+- giải thích vai trò của `self`, `__init__` và `__str__`;
+- giữ state khởi tạo hợp lệ bằng kiểm tra đơn giản;
+- chọn class khi dữ liệu và hành vi liên quan cần đi cùng nhau;
+- dùng composition để tiêm/thay strategy;
+- viết và so sánh ba policy nhỏ: defensive, balanced, aggressive;
+- dùng inheritance trong một ví dụ “is-a” rõ ràng;
+- chạy machine check và giải thích bằng chứng hành vi.
 
-## Thứ tự học
+## Lộ trình học
 
-    class/object → responsibility → composition → strategy swap
-                 → basic inheritance
+1. Đọc [notes](notes.md), đặc biệt class/object và responsibility.
+2. Chạy ba file trong [examples](examples/).
+3. Tự làm ba bài trong [exercises](exercises/) trước khi xem đáp án.
+4. Dùng [hints](hints.md) nếu bị kẹt.
+5. Hoàn thành [mini-project](mini-project/README.md).
+6. Chạy [machine check](checks/README.md) để xác minh solution tham khảo.
 
-Xem [notes](notes.md), [examples](examples/), [exercises](exercises/),
-[hints](hints.md), [machine check](checks/README.md) và
-[mini-project](mini-project/README.md).
+## Lệnh kiểm tra
+
+Từ thư mục gốc repository:
+
+```bash
+python weeks/week-14-oop-essentials/checks/check_week.py
+```
+
+Các file trong `exercises/` là starter có chủ đích để người học tự hoàn thiện;
+machine check hiện xác minh solution tham khảo trong `solutions/`, không tự
+điền đáp án vào starter.
